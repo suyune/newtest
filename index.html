@@ -734,8 +734,9 @@
 };
 
   search();
-
- window.onscroll = function(){
+  document.addEventListener('touchmove', change);
+  document.addEventListener('scroll', change);
+  function change(){
         var top = document.body.scrollTop || document.documentElement.scrollTop;
 		console.log("top:" , top);
         /*当滚动高度大于banner的高度时候颜色不变*/
