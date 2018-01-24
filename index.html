@@ -714,37 +714,39 @@
   <!--滚动屏幕到一定距离后 头部搜索框变化-->
 
 <script type="text/javascript">
-	window.onload = function(){
-    search();
-
-	};
-/*头部搜索*/
-var search = function(){
+	/*头部搜索*/
+ var height ;
+ var sea;
+ var search = function(){
     /*搜索框对象*/
-    var search = document.getElementsByClassName('m_header')[0];
+    sea = document.getElementsByClassName('m_header')[0];
     /*banner对象*/
     var banner = document.getElementsByClassName('banner')[0];
     /*高度*/
-    var height = banner.offsetHeight;
+    height = banner.offsetHeight;
 	console.log(height);
 	
 	var mainHeight = document.getElementById("mainBody").offsetHeight;
 	console.log(mainHeight);
 	document.getElementsByTagName("main")[0].style.height = mainHeight/50 + "rem";
 
-    window.onscroll = function(){
-        var top = document.body.scrollTop;
+   
+};
+
+  search();
+
+ window.onscroll = function(){
+        var top = document.body.scrollTop || document.documentElement.scrollTop;
 		console.log("top:" , top);
         /*当滚动高度大于banner的高度时候颜色不变*/
         if(top > height){
-            search.style.background  = "rgba(255,81,136,0.85)";
+            sea.style.background  = "rgba(255,81,136,0.85)";
 
         }else{
             var op = top/height * 0.85;
-            search.style.background  = "rgba(255,81,136,"+op+")";
+            sea.style.background  = "rgba(255,81,136,"+op+")";
         }
     };
-};
 </script>
 </body>
 </html>
