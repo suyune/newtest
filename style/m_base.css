@@ -66,7 +66,7 @@ main{ position:absolute; width:100%;top:0; bottom:1rem; overflow-y:scroll;}
 .foot_tab_box ul li:nth-child(3) a{ background:url(../images/find.jpg) no-repeat center; background-size: contain;}
 .foot_tab_box ul li:nth-child(4) a{ background:url(../images/cart.jpg) no-repeat center; background-size: contain;}
 .foot_tab_box ul li:nth-child(5) a{ background:url(../images/my.jpg) no-repeat center; background-size: contain;}
-.foot_tab_box ul li:nth-child(1).foot_tab_on a{background:url(../images/h_home.jpg) no-repeat center;background-size: contain; }	
+.foot_tab_box ul li:nth-child(1).foot_tab_on a{background:url(../images/H_home.jpg) no-repeat center;background-size: contain; }	
 /* 
   rem方式，750px 为高保真基准，原高保真大小除以基数100，即 10px/100 = 0.1rem，以此类推,字体还是 px
  */
