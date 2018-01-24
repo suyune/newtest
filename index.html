@@ -713,41 +713,30 @@
   </script>
   <!--滚动屏幕到一定距离后 头部搜索框变化-->
 
+
 <script type="text/javascript">
-	/*头部搜索*/
- var height ;
- var sea;
- var search = function(){
-    /*搜索框对象*/
-    sea = document.getElementsByClassName('m_header')[0];
-    /*banner对象*/
-    var banner = document.getElementsByClassName('banner')[0];
-    /*高度*/
-    height = banner.offsetHeight;
-	console.log(height);
+
+  headscroll();
+  
+  function headscroll() {
+	var is	= false;
+	var s	= $("body").scrollTop()
 	
-	var mainHeight = document.getElementById("mainBody").offsetHeight;
-	console.log(mainHeight);
-	document.getElementsByTagName("main")[0].style.height = mainHeight/50 + "rem";
+	if (s < 95)
+		is = true;
+	else
+		$(".m_header").css("background", "rgba(255,102,153,1)");
+	
+	$(window).scroll(function() {
+		var t = $("body").scrollTop() / 1000 * 8
+		
+		if (t <= 2 && s < 95 && is)
+			$(".m_header").css("background", "rgba(255,102,153," + t + ")");
+		else if (t <= 2 && s > 95)
+			$(".m_header").css("background", "rgba(255,102,153," + t + ")");
+	});
+}
 
-   
-};
-
-  search();
-//   window.addEventListener('touchmove', change);
-  window.addEventListener('scroll', change);
-  function change(){
-        var top = document.body.scrollTop || document.documentElement.scrollTop;
-		console.log("top:" , top);
-        /*当滚动高度大于banner的高度时候颜色不变*/
-        if(top > height){
-            sea.style.background  = "rgba(255,81,136,0.85)";
-
-        }else{
-            var op = top/height * 0.85;
-            sea.style.background  = "rgba(255,81,136,"+op+")";
-        }
-    };
 </script>
 </body>
 </html>
