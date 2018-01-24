@@ -727,15 +727,16 @@
 	else
 		$(".m_header").css("background", "rgba(255,102,153,1)");
 	
-	$(window).scroll(function() {
-		var t = $("body").scrollTop() / 1000 * 8
-		console.log(t);
-		if (t <= 2 && s < 95 && is)
-			$(".m_header").css("background", "rgba(255,102,153," + t + ")");
-		else if (t <= 2 && s > 95)
-			$(".m_header").css("background", "rgba(255,102,153," + t + ")");
-	});
-}
+  }
+$(window).scroll(function() {
+	var t = $("body").scrollTop() / 1000 * 8
+	console.log(t);
+	if (t <= 2 && s < 95 && is)
+		$(".m_header").css("background", "rgba(255,102,153," + t + ")");
+	else if (t <= 2 && s > 95)
+		$(".m_header").css("background", "rgba(255,102,153," + t + ")");
+});
+
 
 </script>
 </body>
