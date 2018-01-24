@@ -61,7 +61,7 @@ main{ position:absolute; width:100%;top:0; bottom:1rem; overflow-y:scroll;}
 .foot_tab_box ul{ width:100%; height:1rem; display:flex;}
 .foot_tab_box ul li{ flex:1;padding-top:0.1rem;}
 .foot_tab_box ul li a{ width:0.8rem; height:0.8rem; display:block; margin:0 auto;}
-.foot_tab_box ul li:nth-child(1) a{ background:url(../images/home.jpg) no-repeat center; background-size: contain;}
+.foot_tab_box ul li:nth-child(1) a{ background:url(../images/H_home.jpg.jpg) no-repeat center; background-size: contain;}
 .foot_tab_box ul li:nth-child(2) a{ background:url(../images/cat.jpg) no-repeat center; background-size: contain;}
 .foot_tab_box ul li:nth-child(3) a{ background:url(../images/find.jpg) no-repeat center; background-size: contain;}
 .foot_tab_box ul li:nth-child(4) a{ background:url(../images/cart.jpg) no-repeat center; background-size: contain;}
