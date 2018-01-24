@@ -724,9 +724,15 @@ var search = function(){
     var banner = document.getElementsByClassName('banner')[0];
     /*高度*/
     var height = banner.offsetHeight;
+	console.log(height);
+	
+	var mainHeight = document.getElementById("mainBody").offsetHeight;
+	console.log(mainHeight);
+	document.getElementsByTagName("main")[0].style.height = mainHeight + "px";
 
     window.onscroll = function(){
         var top = document.body.scrollTop;
+		console.log("top:" , top);
         /*当滚动高度大于banner的高度时候颜色不变*/
         if(top > height){
             search.style.background  = "rgba(255,81,136,0.85)";
